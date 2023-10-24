@@ -7,7 +7,7 @@ export default function ItemList() {
 
     const [sortBy, setSortBy] = useState("name");
 
-    const sorted = [Items] //Contains the list of items.
+    const sorted = [...Items] //Contains the list of items.
 
     if(sortBy === "name"){
         sorted.sort((a, b) => a.name.localCompare(b.name));
