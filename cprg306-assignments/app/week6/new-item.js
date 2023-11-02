@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-export default function NewItem(){
+export default function NewItem({onAddItem}){
 
     const [name, setName] = useState("");
     const [quantity, setQuantity] = useState("");
@@ -14,7 +14,7 @@ export default function NewItem(){
 
         console.log(newItem);
 
-        alert(`New Item Added\nItem Name: ${name}\nQuantity: ${quantity}\nCategory: ${category}`);
+        onAddItem(newItem);
 
         //Reset form
         setName("");
